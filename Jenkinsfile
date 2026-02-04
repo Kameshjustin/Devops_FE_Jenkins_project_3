@@ -23,7 +23,7 @@ pipeline {
 
         stage('Run new container') {
             steps {
-                sh 'docker run -d -p 8080:80 --name analog-container analog-clock'
+                sh 'docker run -d -p 8081:80 --name analog-container analog-clock'
             }
         }
     }
