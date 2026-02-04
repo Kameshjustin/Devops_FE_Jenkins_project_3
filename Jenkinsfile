@@ -1,18 +1,17 @@
 pipeline {
-    agent any 
+    agent any
 
     stages {
-        
-        stage('Clone repository') {
+
+        stage('Checkout SCM') {
             steps {
-                git branch:'main',
-                url:'https://github.com/Kameshjustin/Devops_FE_Jenkins_project_3.git'
+                checkout scm
             }
         }
 
         stage('Build docker image') {
             steps {
-                sh 'docker build -t analog-clock'
+                sh 'docker build -t analog-clock .'
             }
         }
 
