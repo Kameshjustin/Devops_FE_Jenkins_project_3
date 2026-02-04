@@ -5,7 +5,8 @@ pipeline {
         
         stage('Clone repository') {
             steps {
-                git 'https://github.com/Kameshjustin/Devops_FE_Jenkins_project_3.git'
+                git branch:'main',
+                url:'https://github.com/Kameshjustin/Devops_FE_Jenkins_project_3.git'
             }
         }
 
