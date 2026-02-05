@@ -26,5 +26,11 @@ pipeline {
                 sh 'docker run -d -p 8080:80 --name analog-container analog-clock'
             }
         }
+
+        stage('Web URL') {
+            steps {
+                sh 'docker ps'
+            }
+        }
     }
 }
